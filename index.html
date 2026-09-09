@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+<!--
+      <a-box position="-1 0.5 -3" rotation="0 45 0" height="5" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="2" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+-->
+      <a-gltf-model src="assets/background_test.gltf" position="0 0 -4"></a-gltf-model>
+
+      <a-plane position="0 1 -4" rotation="-90 0 0" width="2" height="2" color="#7BC8A4"></a-plane>
+      <a-sky color="#0CFC00"></a-sky>
+
+      <a-assets>
+        <a-asset-item id="background" src="assets/background.glb"></a-asset-item>
+        <a-asset-item id="background_test1" src="assets/background_test1.glb"></a-asset-item>
+      </a-assets>
+
+      <a-marker preset='hiro'>
+<!--
+    	<a-gltf-model src="#background" scale="1 1 1" position="0 -1 -4">
+-->
+        <a-gltf-model src="#background_test1" scale="1 1 1" position="0 -2 -4">
+    	</a-gltf-model>
+      </a-marker>
+
+      <a-entity gltf-model="#background"></a-entity>
+
+    </a-scene>
+  </body>
+</html>
